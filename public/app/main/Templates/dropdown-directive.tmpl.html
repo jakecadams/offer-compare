@@ -1,0 +1,50 @@
+<div ng-if="showIt">
+<form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="salaryInput" class="col-sm-2 control-label">Salary</label>
+    <div class="col-sm-10">
+      <input type="text" ng-change="change()" class="form-control" ng-model="offer.salary" style='width:94%;'>
+    </div>
+  </div>
+</form>
+</div>
+<div class="dropdown" style='width:47%;display: inline-block;padding-right:20px;'>
+  <div class="btn-group" style="width:100%;" dropdown>
+    <button style="width:100%;" type="button" class="btn btn-default dropdown-toggle" ng-disabled="disabled"> {{currentState.name}} <span class="caret"></span> </button>
+    <ul class="dropdown-menu" role="menu">
+      <li ng-repeat="state in states"><a ng-click="selectState(state)">{{state.name}}</a> </li>
+    </ul>
+  </div>
+</div>
+
+<div class="dropdown" style='width:47%;display: inline-block;'>
+  <div class="btn-group" style="width:100%;" dropdown>
+    <button style="width:100%;" type="button" class="btn btn-default dropdown-toggle" ng-disabled="disabled"> {{currentCity.name}} <span class="caret"></span> </button>
+    <ul class="dropdown-menu" role="menu">
+      <li ng-repeat="city in cities"><a ng-click="selectCity(city)">{{city.name}}</a> </li>
+    </ul>
+  </div>
+</div>
+
+
+<div ng-if="showConversion" style="padding-top:20px;font-size:20px;">
+  <div class="future">
+    <span class="currency">{{offer.salary | currency}}</span> in <span class="city">{{currentCity.name}}, {{currentState.name}}</span>
+  </div>
+  <div class="present">
+    is like <span class="currency">{{conversion | currency}}</span> in <span class="city">{{presentLocation.city.name}}, {{presentLocation.state.name}}</span>
+  </div>
+</div>
+
+
+<style>
+span.currency {
+  font-size: 30px;
+  color: #43B97C;
+}
+
+span.city {
+  color: #428bca;
+}
+
+</style>

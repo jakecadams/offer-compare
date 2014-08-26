@@ -1,0 +1,119 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h2>How much is your offer really worth?</h2>
+    <p class="lead">Compare salaries based on cost of living and state taxes.</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+
+    <center><h2>Present Location</h2>
+    <div class="row">
+      <div class="form-group" style="padding-bottom:10px;">
+        <div class="dropdown" style='width:20%;display: inline-block;padding-right:20px;'>
+          <a class="btn btn-default" style="width:100%" data-toggle="dropdown" href="#"><!-- {{ country }} --> State <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
+            <li ng-repeat="country in data.locations.countries | orderBy:'country'">
+              <a>{{country.country}}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="dropdown" style='width:20%;display: inline-block;'>
+          <a class="btn btn-default" style="width:100%" data-toggle="dropdown" href="#"><!-- {{ country }} --> City <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
+            <li ng-repeat="country in data.locations.countries | orderBy:'country'">
+              <a>{{country.country}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </center>
+  </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+
+    <div style="width:50%;padding-right:20px;float:left;">
+      <div class="bs-callout bs-callout-info">
+        <div style='padding-bottom:10px;'><center>Future Location</center></div>
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="salaryInput" class="col-sm-2 control-label">Salary</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="salaryInput" placeholder="$50,000" style='width:96%;'>
+            </div>
+          </div>
+          <div class="form-group">
+              <div class="dropdown pull-left" style='width:47%;padding-left:30px;'>
+                <a class="btn btn-default" style="width:100%" data-toggle="dropdown" href="#"><!-- {{ country }} --> State <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
+                  <li ng-repeat="country in data.locations.countries | orderBy:'country'">
+                    <a>{{country.country}}</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown pull-left" style='width:47%;padding-left:30px;'>
+                <a class="btn btn-default" style="width:100%" data-toggle="dropdown" href="#"><!-- {{ country }} --> City <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
+                  <li ng-repeat="country in data.locations.countries | orderBy:'country'">
+                    <a>{{country.country}}</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </form>
+      </div>
+    </div> 
+
+    <div style="width:50%;padding-right:20px;;float:left;">
+      <div class="bs-callout bs-callout-info">
+        <div style='padding-bottom:10px;'><center>Future Location</center></div>
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="salaryInput" class="col-sm-2 control-label">Salary</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="salaryInput" placeholder="$50,000" style='width:96%;'>
+            </div>
+          </div>
+          <div class="form-group">
+              <div class="dropdown pull-left" style='width:47%;padding-left:30px;'>
+                <a class="btn btn-default" style="width:100%" data-toggle="dropdown" href="#"><!-- {{ country }} --> State <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
+                  <li ng-repeat="country in data.locations.countries | orderBy:'country'">
+                    <a>{{country.country}}</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown pull-left" style='width:47%;padding-left:30px;'>
+                <a class="btn btn-default" style="width:100%" data-toggle="dropdown" href="#"><!-- {{ country }} --> City <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCountry">
+                  <li ng-repeat="country in data.locations.countries | orderBy:'country'">
+                    <a>{{country.country}}</a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+        </form>
+      </div>
+    </div> 
+
+
+  </div> <!-- col-md-12 -->
+</div> <!-- container -->
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="pull-left">
+        <p><a href="https://twitter.com/jakecadams">@jakecadams</a></p>
+    </div>   
+  </div>
+</footer>
